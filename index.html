@@ -1,1 +1,233 @@
-The website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Farhan Shahriyar</title>
+  <meta name="description" content="Md. Farhan Shahriyar — Researcher in quantum machine learning, cybersecurity and cryptography. Department of CSE, HSTU. Team Lead at ZogBiyog.">
+  <meta name="author" content="Md. Farhan Shahriyar">
+  <meta property="og:title" content="Md. Farhan Shahriyar">
+  <meta property="og:description" content="Researcher in quantum machine learning, cybersecurity and cryptography.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#top"><strong>Md. Farhan</strong> Shahriyar</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top" class="container">
+
+    <!-- ===== Header / About ===== -->
+    <header class="post-header">
+      <h1 class="post-title"><span class="font-weight-bold">Md. Farhan</span> Shahriyar</h1>
+      <p class="desc">
+        Department of Computer Science and Engineering,
+        <a href="https://hstu.ac.bd/" target="_blank" rel="noopener">Hajee Mohammad Danesh Science and Technology University (HSTU)</a>
+        &middot; Team Lead at ZogBiyog
+      </p>
+    </header>
+
+    <section id="about" class="about">
+      <div class="profile">
+        <img src="assets/profile.svg" alt="Md. Farhan Shahriyar" class="profile-img">
+        <div class="address">
+          <p>Dept. of CSE, HSTU</p>
+          <p>Dinajpur-5200, Bangladesh</p>
+        </div>
+      </div>
+
+      <div class="bio">
+        <p>
+          Hi! I am <strong>Md. Farhan Shahriyar</strong>, from the Department of Computer Science and Engineering at
+          <a href="https://hstu.ac.bd/" target="_blank" rel="noopener">Hajee Mohammad Danesh Science and Technology University (HSTU)</a>,
+          and currently <strong>Team Lead at ZogBiyog</strong>.
+        </p>
+        <p>
+          I am a researcher in <strong>quantum machine learning</strong>, <strong>cybersecurity</strong> and
+          <strong>cryptography</strong>. My main focus is on <em>hybrid quantum-classical models</em>,
+          algorithmic efficiency, and how their performance compares with classical methods.
+        </p>
+        <p>
+          My published and ongoing research covers quantum feature maps, quantum kernels, feature selection,
+          quantum key distribution (QKD), threat detection, image processing and privacy-preserving learning,
+          with a growing interest in <strong>efficient and reliable AI for security</strong>.
+        </p>
+
+        <h3 class="sub-heading">Research Interests</h3>
+        <ul class="interests">
+          <li><i class="fa-solid fa-atom"></i> Quantum Machine Learning</li>
+          <li><i class="fa-solid fa-diagram-project"></i> Hybrid Quantum-Classical Models</li>
+          <li><i class="fa-solid fa-shield-halved"></i> Cybersecurity &amp; Threat Detection</li>
+          <li><i class="fa-solid fa-key"></i> Cryptography &amp; QKD</li>
+          <li><i class="fa-solid fa-user-lock"></i> Privacy-Preserving Learning</li>
+          <li><i class="fa-solid fa-image"></i> Image Processing</li>
+        </ul>
+
+        <div class="social">
+          <a href="mailto:you@example.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?user=y9TPL08AAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://www.researchgate.net/profile/Md-Shahriyar-3" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a>
+          <a href="https://github.com/mfshahriyar" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== News ===== -->
+    <section id="news">
+      <h2 class="section-title">news</h2>
+      <table class="news-table">
+        <tbody>
+          <tr>
+            <th scope="row">Nov 2026</th>
+            <td>Launched my personal academic website. 🎉</td>
+          </tr>
+          <tr>
+            <th scope="row">2026</th>
+            <td>Leading the team at <strong>ZogBiyog</strong>.</td>
+          </tr>
+          <tr>
+            <th scope="row">2026</th>
+            <td>Ongoing research on quantum kernels and hybrid quantum-classical models for efficient and reliable AI for security.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications">
+      <h2 class="section-title">publications</h2>
+      <p class="muted">
+        For the complete and up-to-date list, please see my
+        <a href="https://scholar.google.com/citations?user=y9TPL08AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        and <a href="https://www.researchgate.net/profile/Md-Shahriyar-3" target="_blank" rel="noopener">ResearchGate</a> profiles.
+      </p>
+
+      <!--
+        To add a paper, copy one <li class="pub"> block below and edit it.
+        badge  : short venue name (e.g. "IEEE", "arXiv", "Springer")
+        title  : paper title
+        authors: author list — wrap your own name in <strong class="me">
+        venue  : full venue / year
+        links  : PDF / DOI / Code buttons
+      -->
+      <ol class="publications">
+        <li class="pub">
+          <div class="badge">QML</div>
+          <div class="pub-body">
+            <div class="pub-title">Quantum feature maps &amp; quantum kernels for classification</div>
+            <div class="pub-authors"><strong class="me">Md. Farhan Shahriyar</strong>, et al.</div>
+            <div class="pub-venue"><em>Replace with venue and year</em></div>
+            <div class="pub-links">
+              <a class="btn" href="https://scholar.google.com/citations?user=y9TPL08AAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="badge">Security</div>
+          <div class="pub-body">
+            <div class="pub-title">Hybrid quantum-classical models for threat detection</div>
+            <div class="pub-authors"><strong class="me">Md. Farhan Shahriyar</strong>, et al.</div>
+            <div class="pub-venue"><em>Replace with venue and year</em></div>
+            <div class="pub-links">
+              <a class="btn" href="https://www.researchgate.net/profile/Md-Shahriyar-3" target="_blank" rel="noopener">ResearchGate</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="badge">Crypto</div>
+          <div class="pub-body">
+            <div class="pub-title">Quantum key distribution &amp; privacy-preserving learning</div>
+            <div class="pub-authors"><strong class="me">Md. Farhan Shahriyar</strong>, et al.</div>
+            <div class="pub-venue"><em>Replace with venue and year</em></div>
+            <div class="pub-links">
+              <a class="btn" href="https://scholar.google.com/citations?user=y9TPL08AAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience">
+      <h2 class="section-title">experience &amp; education</h2>
+      <ul class="timeline">
+        <li>
+          <div class="tl-head">
+            <span class="tl-role">Team Lead</span>
+            <span class="tl-date">Present</span>
+          </div>
+          <div class="tl-org">ZogBiyog</div>
+        </li>
+        <li>
+          <div class="tl-head">
+            <span class="tl-role">Researcher — Quantum ML, Cybersecurity &amp; Cryptography</span>
+            <span class="tl-date">Present</span>
+          </div>
+          <div class="tl-org">Independent &amp; collaborative research</div>
+        </li>
+        <li>
+          <div class="tl-head">
+            <span class="tl-role">Department of Computer Science and Engineering</span>
+            <span class="tl-date"></span>
+          </div>
+          <div class="tl-org">Hajee Mohammad Danesh Science and Technology University (HSTU), Dinajpur, Bangladesh</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <h2 class="section-title">contact</h2>
+      <p>
+        I am always happy to discuss research collaborations in quantum machine learning and AI for security.
+        Feel free to reach out by <a href="mailto:you@example.com">email</a> or through
+        <a href="https://www.researchgate.net/profile/Md-Shahriyar-3" target="_blank" rel="noopener">ResearchGate</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      &copy; <span id="year"></span> Md. Farhan Shahriyar. Hosted on GitHub Pages.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
