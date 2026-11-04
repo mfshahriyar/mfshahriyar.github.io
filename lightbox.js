@@ -17,7 +17,10 @@
     '<button class="lb-nav lb-prev" aria-label="Previous image">&#8249;</button>' +
     '<figure class="lb-figure"><img class="lb-img" alt=""><figcaption class="lb-caption"></figcaption></figure>' +
     '<button class="lb-nav lb-next" aria-label="Next image">&#8250;</button>';
+  // Hidden inline so it never shows at the page bottom, even if style.css is stale.
+  box.style.display = 'none';
   document.body.appendChild(box);
+  var hideTimer = null;
 
   var img = box.querySelector('.lb-img');
   var cap = box.querySelector('.lb-caption');
@@ -50,9 +53,12 @@
     items = list;
     lastFocus = document.activeElement;
     show(i);
+    clearTimeout(hideTimer);
+    box.style.display = '';
     box.setAttribute('aria-hidden', 'false');
     document.documentElement.classList.add('lb-lock');
-    requestAnimationFrame(function () { box.classList.add('open'); });
+    void box.offsetWidth; // apply display before animating so the fade runs
+    box.classList.add('open');
     closeBtn.focus();
   }
 
@@ -60,6 +66,7 @@
     box.classList.remove('open');
     box.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('lb-lock');
+    hideTimer = setTimeout(function () { box.style.display = 'none'; }, 320);
     if (lastFocus) lastFocus.focus();
   }
 
