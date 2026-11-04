@@ -230,3 +230,13 @@ h3 { font-size: 1rem; font-weight: 700; margin: 0 0 4px; }
   .container { padding: 0 16px; }
   .row { flex-direction: column; gap: 0; }
 }
+
+/* ===== PhD-profile additions ===== */
+.affil .role-top { font-weight: 700; color: var(--link); margin-bottom: 4px; }
+.award { color: #d97706; font-weight: 700; }
+h3.sub { margin: 14px 0 6px; font-size: 1.05rem; }
+.note { color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
+.group .row { margin-bottom: 4px; }
+.skills { display: grid; grid-template-columns: max-content 1fr; column-gap: 20px; }
+.skills dd { margin: 0 0 6px; }
+@media (max-width: 600px) { .skills { display: block; } }
