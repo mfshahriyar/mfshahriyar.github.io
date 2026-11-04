@@ -6,7 +6,7 @@ Personal academic website of **Md. Farhan Shahriyar**: plain HTML, CSS and JS wi
 - `index.html`: all content (sidebar profile, about, research interest, news, publications, research topics, experience, contact)
 - `style.css`: styling
 - `script.js`: sticky-nav highlighting, mobile menu and footer year
-- `assets/profile.svg`: placeholder photo. Replace it with your own (for example `assets/profile.jpg`) and update the `<img class="avatar">` src.
+- `assets/profile.jpg`: profile photo shown in the sidebar.
 - `assets/publications/`: paper thumbnails
 
 ## To customise
