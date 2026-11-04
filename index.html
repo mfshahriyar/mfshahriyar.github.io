@@ -18,7 +18,7 @@
     // Apply the saved theme before the page paints, so there is no flash.
     try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=20261104d">
+  <link rel="stylesheet" href="style.css?v=20261104e">
 </head>
 <body>
 
@@ -57,6 +57,9 @@
         <p class="affil-small">Hajee Mohammad Danesh Science and Technology University (HSTU)</p>
         <p class="role">Team Lead, ZogBiyog</p>
       </div>
+      <a class="cv-btn" href="assets/cv/Md_Farhan_Shahriyar_CV.pdf" download="Md_Farhan_Shahriyar_CV.pdf">
+        <i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span>
+      </a>
       <ul class="links">
         <li><span class="ico-wrap"><i class="fa-brands fa-google-scholar"></i></span><a href="https://scholar.google.com/citations?user=y9TPL08AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
         <li><span class="ico-wrap"><i class="fa-brands fa-researchgate"></i></span><a href="https://www.researchgate.net/profile/Md-Shahriyar-3" target="_blank" rel="noopener">ResearchGate</a></li>
@@ -74,6 +77,11 @@
         <button class="listen-play" type="button" aria-label="Listen to this page"><i class="fa-solid fa-play"></i><span>Listen</span></button>
         <button class="listen-stop icon-btn" type="button" aria-label="Stop reading" title="Stop" disabled><i class="fa-solid fa-stop"></i></button>
         <span class="listen-status" aria-live="polite">Have this page read aloud</span>
+        <div class="listen-volume">
+          <button class="listen-mute icon-btn" type="button" aria-label="Mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
+          <input class="listen-vol" type="range" min="0" max="100" step="5" value="100" aria-label="Volume">
+          <span class="listen-vol-val" aria-hidden="true">100%</span>
+        </div>
         <label class="listen-speed-label">Speed
           <select class="listen-speed" aria-label="Reading speed">
             <option value="1" selected>1&times;</option>
@@ -92,7 +100,7 @@
           <a href="https://hstu.ac.bd/" target="_blank" rel="noopener">Hajee Mohammad Danesh Science and Technology University (HSTU)</a>,
           where my thesis on hybrid quantum&ndash;classical secure file transmission is supervised by Prof. Dr. Md. Abdulla Al Mamun
           and funded by the <strong>NST Fellowship</strong>. I am also the <strong>Team Lead at ZogBiyog</strong>, and a
-          <strong>prospective Ph.D. student</strong> looking for research-focused doctoral positions.
+          <strong>prospective Ph.D. student</strong> looking for doctoral positions.
         </p>
         <p>
           My research spans <strong>quantum machine learning, cybersecurity and cryptography</strong>.
@@ -135,7 +143,7 @@
         <div class="callout">
           <strong class="callout-title">Seeking Ph.D. Positions</strong>
           I am actively looking for Ph.D. opportunities in quantum machine learning, quantum security and trustworthy AI for security.
-          If my background fits your group, I would be glad to hear from you at <code>your.email[at]example[dot]com</code>.
+          If my background fits your group, I would be glad to hear from you at <code>your.email[at]example[dot]com</code>, and my <a href="assets/cv/Md_Farhan_Shahriyar_CV.pdf" download="Md_Farhan_Shahriyar_CV.pdf">CV is available here</a>.
         </div>
       </section>
 
@@ -377,8 +385,8 @@
     </main>
   </div>
 
-  <script src="script.js?v=20261104d"></script>
-  <script src="lightbox.js?v=20261104d"></script>
-  <script src="listen.js?v=20261104d"></script>
+  <script src="script.js?v=20261104e"></script>
+  <script src="lightbox.js?v=20261104e"></script>
+  <script src="listen.js?v=20261104e"></script>
 </body>
 </html>

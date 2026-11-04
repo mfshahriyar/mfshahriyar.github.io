@@ -14,6 +14,10 @@
   var stopBtn = bar.querySelector('.listen-stop');
   var speedSel = bar.querySelector('.listen-speed');
   var status = bar.querySelector('.listen-status');
+  var volInput = bar.querySelector('.listen-vol');
+  var volVal = bar.querySelector('.listen-vol-val');
+  var muteBtn = bar.querySelector('.listen-mute');
+  var lastVolume = 100;
 
   var SKIP = '.listen-bar, .pub-links, .section-head .muted, .photo-caption summary, .footer, script, style';
   var BLOCKS = 'h2, h3, h4, p, li, dt, dd, .pub-title, .pub-authors, .pub-venue, figcaption';
@@ -25,6 +29,19 @@
   var voice = null;
 
   try { var saved = localStorage.getItem('listenRate'); if (saved) speedSel.value = saved; } catch (e) {}
+  try { var savedVol = localStorage.getItem('listenVolume'); if (savedVol !== null && volInput) volInput.value = savedVol; } catch (e) {}
+
+  function volume() { return volInput ? (parseInt(volInput.value, 10) || 0) / 100 : 1; }
+  function syncVolumeUI() {
+    if (!volInput) return;
+    var v = parseInt(volInput.value, 10) || 0;
+    volVal.textContent = v + '%';
+    volInput.style.setProperty('--fill', v + '%');
+    var icon = v === 0 ? 'fa-volume-xmark' : (v < 50 ? 'fa-volume-low' : 'fa-volume-high');
+    muteBtn.innerHTML = '<i class="fa-solid ' + icon + '"></i>';
+    muteBtn.setAttribute('aria-label', v === 0 ? 'Unmute' : 'Mute');
+    muteBtn.title = v === 0 ? 'Unmute' : 'Mute';
+  }
 
   function pickVoice() {
     var vs = synth.getVoices();
@@ -93,6 +110,7 @@
     var c = chunks[index];
     var u = new SpeechSynthesisUtterance(c.text);
     u.rate = parseFloat(speedSel.value) || 1;
+    u.volume = volume();
     if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = 'en-US'; }
     u.onend = function () {
       if (my !== token || state !== 'playing') return;
@@ -142,6 +160,28 @@
     try { localStorage.setItem('listenRate', speedSel.value); } catch (e) {}
     if (state === 'playing') { token++; synth.cancel(); speak(); }  // apply new speed now
   });
+  // Volume: the browser can't change the volume of a sentence already being
+  // spoken, so the current sentence is restarted at the new volume.
+  var volTimer = null;
+  function applyVolume() {
+    try { localStorage.setItem('listenVolume', volInput.value); } catch (e) {}
+    syncVolumeUI();
+    clearTimeout(volTimer);
+    volTimer = setTimeout(function () {
+      if (state === 'playing') { token++; synth.cancel(); speak(); }
+    }, 250);
+  }
+  if (volInput) {
+    volInput.addEventListener('input', applyVolume);
+    muteBtn.addEventListener('click', function () {
+      var v = parseInt(volInput.value, 10) || 0;
+      if (v > 0) { lastVolume = v; volInput.value = 0; }
+      else { volInput.value = lastVolume || 100; }
+      applyVolume();
+    });
+    syncVolumeUI();
+  }
+
   window.addEventListener('beforeunload', function () { synth.cancel(); });
 
   bar.hidden = false;
