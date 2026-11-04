@@ -13,7 +13,11 @@
   <meta property="og:type" content="profile">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20261104b">
+    <script>
+    // Apply the saved theme before the page paints, so there is no flash.
+    try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="style.css?v=20261104c">
 </head>
 <body>
 
@@ -24,18 +28,19 @@
         <h1 class="name">Md. Farhan Shahriyar</h1>
         <p class="tagline">Quantum ML &middot; Cybersecurity &middot; Cryptography</p>
       </div>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
       <nav class="nav" aria-label="Main">
         <a href="#home" class="active">Home</a>
         <a href="#news">News</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
-        <a href="#awards">Awards</a>
         <a href="#skills">Skills</a>
+        <a href="#awards">Awards</a>
         <a href="#life">Life</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
 
@@ -221,6 +226,17 @@
         </div>
       </section>
 
+      <!-- ===== Skills ===== -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills">
+          <dt>Languages</dt><dd>Python, SQL, Bash, C, C++</dd>
+          <dt>Quantum &amp; ML</dt><dd>Qiskit, PennyLane, PyTorch, TensorFlow, Scikit-learn</dd>
+          <dt>Frameworks</dt><dd>Django</dd>
+          <dt>Tools</dt><dd>Git, GitHub, Linux, LaTeX, Jupyter, VS Code, Zotero, PowerShell, Microsoft Word, PowerPoint, Excel</dd>
+        </dl>
+      </section>
+
       <!-- ===== Honors & Awards ===== -->
       <section id="awards">
         <h2>Honors &amp; Awards</h2>
@@ -260,17 +276,6 @@
             </figcaption>
           </figure>
         </div>
-      </section>
-
-      <!-- ===== Skills ===== -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <dl class="skills">
-          <dt>Languages</dt><dd>Python, SQL, Bash, C, C++</dd>
-          <dt>Quantum &amp; ML</dt><dd>Qiskit, PennyLane, PyTorch, TensorFlow, Scikit-learn</dd>
-          <dt>Frameworks</dt><dd>Django</dd>
-          <dt>Tools</dt><dd>Git, GitHub, Linux, LaTeX, Jupyter, VS Code, Zotero, PowerShell, Microsoft Word, PowerPoint, Excel</dd>
-        </dl>
       </section>
 
       <!-- ===== Beyond research ===== -->
@@ -355,7 +360,7 @@
     </main>
   </div>
 
-  <script src="script.js?v=20261104b"></script>
-  <script src="lightbox.js?v=20261104b"></script>
+  <script src="script.js?v=20261104c"></script>
+  <script src="lightbox.js?v=20261104c"></script>
 </body>
 </html>

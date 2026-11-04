@@ -38,6 +38,34 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Light / dark theme toggle (remembers the choice on this device)
+  var root = document.documentElement;
+  var themeBtn = document.querySelector('.theme-toggle');
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+  function syncThemeButton() {
+    if (!themeBtn) return;
+    var dark = isDark();
+    themeBtn.innerHTML = dark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncThemeButton();
+    });
+  }
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) mq.addEventListener('change', syncThemeButton);
+  }
+  syncThemeButton();
+
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
