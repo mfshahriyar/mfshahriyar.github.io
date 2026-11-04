@@ -421,3 +421,47 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .listen-bar.is-playing .listen-play i { animation: none; }
 }
+
+/* ---------- Listen: volume ---------- */
+.listen-volume { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+.listen-bar .listen-mute { width: 32px; height: 32px; font-size: 0.85rem; }
+.listen-vol {
+  --fill: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 96px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--link) var(--fill), var(--border) var(--fill));
+  cursor: pointer;
+}
+.listen-vol::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--link); border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--link);
+}
+.listen-vol::-moz-range-thumb {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--link); border: 2px solid var(--bg);
+}
+.listen-vol:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+.listen-vol-val { min-width: 3.2em; font-variant-numeric: tabular-nums; }
+
+/* ---------- CV button ---------- */
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: var(--link);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+.cv-btn:hover { text-decoration: none; filter: brightness(1.08); transform: translateY(-1px); }
+.cv-btn:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
