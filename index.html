@@ -18,7 +18,7 @@
     // Apply the saved theme before the page paints, so there is no flash.
     try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=20261104e">
+  <link rel="stylesheet" href="style.css?v=20261104f">
 </head>
 <body>
 
@@ -40,6 +40,7 @@
         <a href="#life">Life</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="icon-btn listen-toggle" type="button" aria-label="Listen to this page" title="Listen to this page" aria-expanded="false" aria-controls="listen-panel" hidden><i class="fa-solid fa-headphones"></i></button>
       <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
       <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -71,27 +72,6 @@
 
     <!-- ===== Main content ===== -->
     <main class="content">
-
-      <!-- ===== Listen to this page (text-to-speech) ===== -->
-      <div class="listen-bar" hidden>
-        <button class="listen-play" type="button" aria-label="Listen to this page"><i class="fa-solid fa-play"></i><span>Listen</span></button>
-        <button class="listen-stop icon-btn" type="button" aria-label="Stop reading" title="Stop" disabled><i class="fa-solid fa-stop"></i></button>
-        <span class="listen-status" aria-live="polite">Have this page read aloud</span>
-        <div class="listen-volume">
-          <button class="listen-mute icon-btn" type="button" aria-label="Mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
-          <input class="listen-vol" type="range" min="0" max="100" step="5" value="100" aria-label="Volume">
-          <span class="listen-vol-val" aria-hidden="true">100%</span>
-        </div>
-        <label class="listen-speed-label">Speed
-          <select class="listen-speed" aria-label="Reading speed">
-            <option value="1" selected>1&times;</option>
-            <option value="1.25">1.25&times;</option>
-            <option value="1.5">1.5&times;</option>
-            <option value="1.75">1.75&times;</option>
-            <option value="2">2&times;</option>
-          </select>
-        </label>
-      </div>
 
       <!-- ===== About ===== -->
       <section id="home" class="bio">
@@ -385,8 +365,37 @@
     </main>
   </div>
 
-  <script src="script.js?v=20261104e"></script>
-  <script src="lightbox.js?v=20261104e"></script>
-  <script src="listen.js?v=20261104e"></script>
+  <!-- ===== Listen player (opened from the headphones button) ===== -->
+  <div class="listen-panel" id="listen-panel" role="region" aria-label="Listen to this page" hidden>
+    <div class="listen-head">
+      <span class="listen-title"><i class="fa-solid fa-headphones"></i> Listen to this page</span>
+      <button class="listen-close icon-btn" type="button" aria-label="Close player" title="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="listen-controls">
+      <button class="listen-play" type="button" aria-label="Start reading"><i class="fa-solid fa-play"></i><span>Play</span></button>
+      <button class="listen-stop icon-btn" type="button" aria-label="Stop and go back to the start" title="Stop" disabled><i class="fa-solid fa-stop"></i></button>
+      <span class="listen-status" aria-live="polite">Ready</span>
+    </div>
+    <div class="listen-settings">
+      <div class="listen-volume">
+        <button class="listen-mute icon-btn" type="button" aria-label="Mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
+        <input class="listen-vol" type="range" min="0" max="100" step="5" value="100" aria-label="Volume">
+        <span class="listen-vol-val" aria-hidden="true">100%</span>
+      </div>
+      <label class="listen-speed-label">Speed
+        <select class="listen-speed" aria-label="Reading speed">
+          <option value="1" selected>1&times;</option>
+          <option value="1.25">1.25&times;</option>
+          <option value="1.5">1.5&times;</option>
+          <option value="1.75">1.75&times;</option>
+          <option value="2">2&times;</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <script src="script.js?v=20261104f"></script>
+  <script src="lightbox.js?v=20261104f"></script>
+  <script src="listen.js?v=20261104f"></script>
 </body>
 </html>
