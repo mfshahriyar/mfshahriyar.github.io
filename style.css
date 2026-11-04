@@ -248,3 +248,62 @@ h3.sub { margin: 14px 0 6px; font-size: 1.05rem; }
 .cert a:hover img { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); }
 .cert figcaption { font-size: 0.92rem; margin-top: 6px; }
 @media (max-width: 600px) { .certs { grid-template-columns: 1fr; padding-left: 0; } }
+
+/* ===== Compact header: name and menu on one row ===== */
+.site-header { padding-top: 1rem; }
+.header-inner { flex-wrap: nowrap; padding-bottom: 8px; }
+.name { font-size: 2.6rem; white-space: nowrap; }
+.nav { flex-wrap: nowrap; column-gap: 0; }
+.nav a { font-size: 0.92rem; padding: 4px 7px; white-space: nowrap; }
+html { scroll-padding-top: 100px; }
+.sidebar { top: 110px; }
+@media (max-width: 1100px) {
+  .nav a { font-size: 0.85rem; padding: 4px 5px; }
+  .name { font-size: 2.2rem; }
+}
+
+/* ===== Education ===== */
+.group .row h3 { margin: 0; }
+.details { list-style: none; padding: 0; margin: 4px 0 0; }
+.details li { margin: 2px 0; }
+.details .label { font-weight: 700; }
+
+/* ===== Skills ===== */
+.skills { margin: 0; padding-left: 16px; }
+.skills dt { font-weight: 700; }
+
+/* ===== Beyond research ===== */
+.hobbies { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-left: 16px; }
+.hobby { border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+.hobby i { font-size: 1.4rem; color: var(--link); margin-bottom: 6px; }
+.hobby p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding-left: 16px; }
+.gallery .muted { grid-column: 1 / -1; margin: 0; }
+.gallery .photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; display: block; }
+
+@media (max-width: 900px) {
+  .header-inner { flex-wrap: wrap; }
+  .nav { flex-wrap: wrap; }
+  .nav a { font-size: 1rem; padding: 6px 8px; }
+  .name { font-size: 2rem; }
+  .hobbies, .gallery { grid-template-columns: 1fr; padding-left: 0; }
+  .skills { padding-left: 0; }
+}
+
+/* ===== Photography cards ===== */
+.gallery { align-items: start; }
+.photo-card { margin: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg); }
+.photo-frame { position: relative; }
+.photo-frame img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.photo-title {
+  position: absolute; left: 0; right: 0; bottom: 0; margin: 0;
+  padding: 28px 12px 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem; font-weight: 700; color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+.photo-caption { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 0.9rem; padding: 8px 12px; }
+.photo-caption summary { cursor: pointer; color: var(--link); font-weight: 600; }
+.photo-caption summary:hover { text-decoration: underline; }
+.photo-caption p { margin: 8px 0 2px; color: var(--text); line-height: 1.5; }
