@@ -18,7 +18,7 @@
     // Apply the saved theme before the page paints, so there is no flash.
     try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=20261104c">
+  <link rel="stylesheet" href="style.css?v=20261104d">
 </head>
 <body>
 
@@ -68,6 +68,22 @@
 
     <!-- ===== Main content ===== -->
     <main class="content">
+
+      <!-- ===== Listen to this page (text-to-speech) ===== -->
+      <div class="listen-bar" hidden>
+        <button class="listen-play" type="button" aria-label="Listen to this page"><i class="fa-solid fa-play"></i><span>Listen</span></button>
+        <button class="listen-stop icon-btn" type="button" aria-label="Stop reading" title="Stop" disabled><i class="fa-solid fa-stop"></i></button>
+        <span class="listen-status" aria-live="polite">Have this page read aloud</span>
+        <label class="listen-speed-label">Speed
+          <select class="listen-speed" aria-label="Reading speed">
+            <option value="1" selected>1&times;</option>
+            <option value="1.25">1.25&times;</option>
+            <option value="1.5">1.5&times;</option>
+            <option value="1.75">1.75&times;</option>
+            <option value="2">2&times;</option>
+          </select>
+        </label>
+      </div>
 
       <!-- ===== About ===== -->
       <section id="home" class="bio">
@@ -361,7 +377,8 @@
     </main>
   </div>
 
-  <script src="script.js?v=20261104c"></script>
-  <script src="lightbox.js?v=20261104c"></script>
+  <script src="script.js?v=20261104d"></script>
+  <script src="lightbox.js?v=20261104d"></script>
+  <script src="listen.js?v=20261104d"></script>
 </body>
 </html>
