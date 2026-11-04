@@ -29,12 +29,12 @@
       <nav class="nav" aria-label="Main">
         <a href="#home" class="active">Home</a>
         <a href="#news">News</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
-        <a href="#honors">Honors</a>
+        <a href="#awards">Awards</a>
         <a href="#skills">Skills</a>
+        <a href="#life">Life</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -63,12 +63,14 @@
     <!-- ===== Main content ===== -->
     <main class="content">
 
+      <!-- ===== About ===== -->
       <section id="home" class="bio">
         <p>
           I am an M.Sc. student and researcher in the Department of Computer Science and Engineering,
           <a href="https://hstu.ac.bd/" target="_blank" rel="noopener">Hajee Mohammad Danesh Science and Technology University (HSTU)</a>,
-          where my thesis on hybrid quantum&ndash;classical secure file transmission is supervised by Prof. Dr. Md. Abdulla Al Mamun and funded by the <strong>NST Fellowship</strong>. I am also the <strong>Team Lead at ZogBiyog</strong>, and a <strong>prospective Ph.D. student</strong>
-          looking for research-focused doctoral positions.
+          where my thesis on hybrid quantum&ndash;classical secure file transmission is supervised by Prof. Dr. Md. Abdulla Al Mamun
+          and funded by the <strong>NST Fellowship</strong>. I am also the <strong>Team Lead at ZogBiyog</strong>, and a
+          <strong>prospective Ph.D. student</strong> looking for research-focused doctoral positions.
         </p>
         <p>
           My research spans <strong>quantum machine learning, cybersecurity and cryptography</strong>.
@@ -119,7 +121,6 @@
       <section id="news">
         <h2>News</h2>
         <ul class="news">
-          <li><span class="date">[2026.11]</span> Launched my personal academic website.</li>
           <li><span class="date">[2026.10]</span> Our systematic review "<a href="https://doi.org/10.1155/que2/7042681" target="_blank" rel="noopener">Quantum Key Distribution With Steganography: A Systematic Review of Hybrid Security Frameworks for Postquantum Cryptography</a>" has been published in <em>Quantum Engineering</em>.</li>
           <li><span class="date">[2026.04]</span> Published the project proposal "<a href="https://doi.org/10.13140/RG.2.2.27319.07845/3" target="_blank" rel="noopener">NirapodSobzi: A Vegetable Disease Detection Application</a>".</li>
           <li><span class="date">[2026.01]</span> Awarded the <span class="award">NST Fellowship 2025&ndash;2026</span> by the Ministry of Science and Technology, Bangladesh, for my M.Sc. thesis <em>NirapodQSeal</em>.</li>
@@ -132,10 +133,24 @@
         </ul>
       </section>
 
+      <!-- ===== Education ===== -->
+      <section id="education">
+        <h2>Education</h2>
+        <div class="group">
+          <div class="row"><h3>M.Sc. in Computer Science and Engineering</h3><span class="right">2025 &ndash; Present</span></div>
+          <p>Hajee Mohammad Danesh Science and Technology University (HSTU), Dinajpur, Bangladesh</p>
+          <ul class="details">
+            <li><span class="label">Thesis:</span> <em>NirapodQSeal: A Hybrid Quantum&ndash;Classical Framework for Secure File Transmission and Concealment via Entanglement and Hash Integrity</em></li>
+            <li><span class="label">Supervisor:</span> Dr. Md. Abdulla Al Mamun, Professor and Chairman, Department of CSE, HSTU</li>
+            <li><span class="label">Funding:</span> <span class="award">NST Fellowship 2025&ndash;2026</span>, Ministry of Science and Technology, Bangladesh (Physical Science group) &middot;
+              <a href="https://github.com/mfshahriyar/mscINcse/tree/main/ThesisWork" target="_blank" rel="noopener">details</a></li>
+          </ul>
+        </div>
+      </section>
+
       <!-- ===== Publications =====
            To add a paper, copy one <article class="pub"> block and edit it.
-           Put a thumbnail in assets/publications/ and point <img src> to it.
-           Wrap your own name in <strong>. -->
+           Put a thumbnail in assets/publications/ and point <img src> to it. -->
       <section id="publications">
         <div class="section-head">
           <h2>Selected Publications</h2>
@@ -171,60 +186,23 @@
             <p class="pub-links"><a href="https://arxiv.org/abs/2503.01799" target="_blank" rel="noopener">arXiv</a> | <a href="https://arxiv.org/pdf/2503.01799" target="_blank" rel="noopener">pdf</a></p>
           </div>
         </article>
-      </section>
 
-      <!-- ===== Projects ===== -->
-      <section id="projects">
-        <h2>Projects</h2>
+        <h3 class="sub">Project Reports</h3>
         <div class="group">
-          <h3>NirapodSobzi: A Vegetable Disease Detection Application <span class="muted">(Project Proposal)</span></h3>
-          <div class="row"><span>CSE 531 Software Project Management, M.Sc. in CSE, HSTU &middot; under Prof. Dr. Ashis Kumar Mandal</span><span class="right">Apr 2026</span></div>
-          <p class="note">Software project proposal for an application that detects vegetable diseases, including planning, scope, cost and schedule management.</p>
+          <div class="row"><span><strong>NirapodSobzi: A Vegetable Disease Detection Application</strong> <span class="muted">(Project Proposal)</span></span><span class="right">Apr 2026</span></div>
+          <p class="note">CSE 531 Software Project Management, M.Sc. in CSE, HSTU, under Prof. Dr. Ashis Kumar Mandal.</p>
           <p class="pub-links"><a href="https://doi.org/10.13140/RG.2.2.27319.07845/3" target="_blank" rel="noopener">proposal</a> | <span class="muted">DOI: 10.13140/RG.2.2.27319.07845/3</span></p>
-        </div>
-      </section>
-
-      <!-- ===== Education ===== -->
-      <section id="education">
-        <h2>Education</h2>
-        <div class="group">
-          <h3>Hajee Mohammad Danesh Science and Technology University (HSTU), Dinajpur, Bangladesh</h3>
-          <div class="row"><span><strong>M.Sc. in Computer Science and Engineering</strong></span><span class="right">2025 &ndash; Present</span></div>
-          <p class="thesis"><span class="label">Thesis:</span> <em>NirapodQSeal: A Hybrid Quantum&ndash;Classical Framework for Secure File Transmission and Concealment via Entanglement and Hash Integrity</em></p>
-          <p class="thesis"><span class="label">Supervisor:</span> Dr. Md. Abdulla Al Mamun, Professor and Chairman, Department of CSE, HSTU</p>
-          <p class="thesis"><span class="label">Funding:</span> <span class="award">National Science and Technology (NST) Fellowship 2025&ndash;2026</span>, Ministry of Science and Technology, Bangladesh (Physical Science group) &middot;
-            <a href="https://github.com/mfshahriyar/mscINcse/tree/main/ThesisWork" target="_blank" rel="noopener">details</a></p>
         </div>
       </section>
 
       <!-- ===== Experience ===== -->
       <section id="experience">
-        <h2>Research &amp; Work Experience</h2>
+        <h2>Experience</h2>
+        <h3 class="sub">Research &amp; Work</h3>
         <div class="group">
-          <h3>ZogBiyog</h3>
-          <div class="row"><span>Team Lead</span><span class="right">Present</span></div>
-        </div>
-        <div class="group">
-          <h3>Hajee Mohammad Danesh Science and Technology University (HSTU)</h3>
-          <div class="row"><span>Researcher, Department of Computer Science and Engineering</span><span class="right">Present</span></div>
+          <div class="row"><span><strong>Team Lead</strong>, ZogBiyog</span><span class="right">Present</span></div>
+          <div class="row"><span><strong>Researcher</strong>, Department of CSE, HSTU</span><span class="right">2025 &ndash; Present</span></div>
           <p class="note">Quantum machine learning, quantum key distribution and AI for cybersecurity.</p>
-        </div>
-      </section>
-
-      <!-- ===== Honors, leadership & mentorship ===== -->
-      <section id="honors">
-        <h2>Honors &amp; Activities</h2>
-        <div class="group">
-          <h3>NST Fellowship 2025&ndash;2026, <span class="award">Ministry of Science and Technology, Bangladesh</span></h3>
-          <p>Awarded the National Science and Technology Fellowship (Physical Science group) to fund my M.Sc. thesis research on hybrid quantum&ndash;classical secure file transmission.</p>
-        </div>
-        <div class="group">
-          <h3>National Merit Scholarship (SSC), <span class="award">Ministry of Education, Bangladesh</span> <span class="muted">2015&ndash;2017</span></h3>
-          <p>Fully funded government merit stipend awarded to students ranking in the top percentile of their regional education board in the nationwide public examination.</p>
-        </div>
-        <div class="group">
-          <h3>ICPC 2023 Regional Round, <span class="award">Honorable Mention</span></h3>
-          <p>Competed in the International Collegiate Programming Contest (ICPC) 2023 regional round and solved three algorithmic problems on permutations and combinatorics, algorithm design and data structures.</p>
         </div>
 
         <h3 class="sub">Leadership</h3>
@@ -240,6 +218,23 @@
             I supported him from early research work through the Ph.D. application process, and he went on to receive Ph.D. offers from seven universities
             (<a href="https://americabangla.com/education/102426120043" target="_blank" rel="noopener">featured in America Bangla, Oct 2026</a>).
           </p>
+        </div>
+      </section>
+
+      <!-- ===== Honors & Awards ===== -->
+      <section id="awards">
+        <h2>Honors &amp; Awards</h2>
+        <div class="group">
+          <div class="row"><span><strong>NST Fellowship 2025&ndash;2026</strong>, Ministry of Science and Technology, Bangladesh</span><span class="right">2026</span></div>
+          <p class="note">Awarded under the Physical Science group to fund my M.Sc. thesis research on hybrid quantum&ndash;classical secure file transmission.</p>
+        </div>
+        <div class="group">
+          <div class="row"><span><strong>ICPC 2023 Regional Round</strong>, <span class="award">Honorable Mention</span></span><span class="right">2023</span></div>
+          <p class="note">Solved three algorithmic problems on permutations and combinatorics, algorithm design and data structures.</p>
+        </div>
+        <div class="group">
+          <div class="row"><span><strong>National Merit Scholarship (SSC)</strong>, Ministry of Education, Bangladesh</span><span class="right">2015 &ndash; 2017</span></div>
+          <p class="note">Fully funded government merit stipend awarded to students ranking in the top percentile of their regional education board.</p>
         </div>
 
         <h3 class="sub">Certifications</h3>
@@ -265,19 +260,46 @@
             </figcaption>
           </figure>
         </div>
-          <div class="row"><span><strong>Master Git and GitHub: Beginner to Expert</strong>, Udemy &middot; <a href="https://www.udemy.com/certificate/UC-e862390f-f6d5-4395-ae43-c7ad388f687b/" target="_blank" rel="noopener">credential</a></span><span class="right">Sep 2024</span></div>
-        </div>
       </section>
 
       <!-- ===== Skills ===== -->
       <section id="skills">
         <h2>Skills</h2>
-        <dl class="entries skills">
+        <dl class="skills">
           <dt>Languages</dt><dd>Python, SQL, Bash, C, C++</dd>
           <dt>Quantum &amp; ML</dt><dd>Qiskit, PennyLane, PyTorch, TensorFlow, Scikit-learn</dd>
           <dt>Frameworks</dt><dd>Django</dd>
           <dt>Tools</dt><dd>Git, GitHub, Linux, LaTeX, Jupyter, VS Code, Zotero, PowerShell, Microsoft Word, PowerPoint, Excel</dd>
         </dl>
+      </section>
+
+      <!-- ===== Beyond research ===== -->
+      <section id="life">
+        <h2>Beyond Research</h2>
+        <div class="hobbies">
+          <div class="hobby">
+            <i class="fa-solid fa-earth-asia"></i>
+            <h3>Travelling</h3>
+            <p>Exploring new places, cultures and landscapes.</p>
+          </div>
+          <div class="hobby">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Football</h3>
+            <p>Playing and following the game; it keeps me active and team-minded.</p>
+          </div>
+          <div class="hobby">
+            <i class="fa-solid fa-camera"></i>
+            <h3>Photography</h3>
+            <p>Capturing moments from my travels and everyday life.</p>
+          </div>
+        </div>
+
+        <!-- Photography gallery: put photos in assets/photography/ and add one
+             <a class="photo" ...><img ...></a> per photo inside .gallery. -->
+        <h3 class="sub">Photography</h3>
+        <div class="gallery">
+          <p class="muted">Photos coming soon.</p>
+        </div>
       </section>
 
       <!-- ===== Contact ===== -->
