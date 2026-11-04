@@ -370,3 +370,18 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lightbox, .lb-figure, .lb-img, .lb-close { transition: none; }
 }
+
+/* ===== Sidebar profile: tidy alignment ===== */
+.sidebar { padding-left: 0; }
+.avatar { margin-bottom: 14px; }
+.affil { line-height: 1.4; }
+.affil .role-top { font-size: 1rem; margin-bottom: 6px; }
+.affil .affil-title { font-size: 0.95rem; font-weight: 600; }
+.affil .affil-small { font-size: 0.86rem; color: var(--muted); margin-top: 2px; }
+.affil .role { font-size: 0.95rem; margin-top: 8px; }
+.links { margin: 16px 0 0; padding: 14px 0 0; border-top: 1px solid var(--border); }
+.links li { margin: 0 0 8px; gap: 10px; font-size: 0.92rem; line-height: 1.3; align-items: center; }
+.links li .ico-wrap { flex: 0 0 18px; width: 18px; display: inline-flex; justify-content: center; color: var(--muted); }
+.links li .ico-wrap i { width: auto; font-size: 15px; }
+.links li .ico { width: 16px; height: 16px; display: block; }
+.links li span:not(.ico-wrap) { word-break: break-word; }
